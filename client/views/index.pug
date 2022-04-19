@@ -1,0 +1,59 @@
+doctype html
+head
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  // Bootstrap CSS
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+  title Hệ Thống Thanh Toán Học Phí TDT
+nav.navbar.fixed-top.navbar-light.bg-light
+  a.navbar-brand(href='#')
+    img.d-inline-block.align-top(src='https://stdportal.tdtu.edu.vn/Content/images/image.png' width='80' height='30' alt='')
+    |             Hệ Thống Thanh Toán Học Phí
+  .form-inline.my-2.my-lg-0
+    span.mr-sm-2=user[3]
+    a(href='/logout')
+      button.btn.btn-outline-success.my-2.my-sm-0() Log Out
+.container.mt-5.mb-5
+  .jumbotron.jumbotron-fluid
+    .container
+      h1.display-4 Thanh to&aacute;n h&#x1ECD;c ph&iacute; TDT
+      p.lead &Dstrok;&acirc;y l&agrave; trang web thanh to&aacute;n h&#x1ECD;c ph&iacute; cho sinh vi&ecirc;n TDT
+  if message
+    if warn
+      .alert.alert-warning.alert-dismissible.fade.show(role='alert')
+        strong=message
+        button.close(type='button' data-dismiss='alert' aria-label='Close')
+          span(aria-hidden='true') &times;
+    else
+      .alert.alert-success.alert-dismissible.fade.show(role='alert')
+        strong=message
+        button.close(type='button' data-dismiss='alert' aria-label='Close')
+          span(aria-hidden='true') &times;
+  .card(style='width: 18rem;')
+    img.card-img-top(src='pay.jfif' alt='Card image cap')
+    .card-body
+      h5.card-title Thanh to&aacute;n h&#x1ECD;c ph&iacute;
+      // Button trigger modal pay fee
+      button.btn.btn-primary.float-right(type='button' data-toggle='modal' data-target='#modalFee')
+        | Thanh to&aacute;n
+      // Modal pay fee
+      #modalFee.modal.fade(tabindex='-1' role='dialog' aria-labelledby='modalFeeLabel' aria-hidden='true')
+        .modal-dialog(role='document')
+          .modal-content
+            .modal-header
+              h5#modalFeeLabel.modal-title Thanh to&aacute;n h&#x1ECD;c ph&iacute;
+              button.close(type='button' data-dismiss='modal' aria-label='Close')
+                span(aria-hidden='true') &times;
+            .modal-body
+              form#formFee(action='/fee' method='GET')
+                .form-group.row
+                  label.col-sm-2.col-form-label(for='mssv') MSSV
+                  .col-sm-10
+                    input#mssv.form-control(type='text' placeholder='MSSV' name='id')
+                button.btn.btn-primary.float-right(type='submit') Submit
+// Optional JavaScript
+// jQuery first, then Popper.js, then Bootstrap JS
+script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous')
+script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')

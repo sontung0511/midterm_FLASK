@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="https://stdportal.tdtu.edu.vn/Content/images/image.png" width="80" height="30" class="d-inline-block align-top" alt="">
+            Hệ Thống Thanh Toán Học Phí
+        </a>
+        <div class="form-inline my-2 my-lg-0">
+            <span class="mr-sm-2">Nguyen Viet Trung</span>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log Out</button>
+        </div>
+    </nav>
+    <div class="container mt-5 mb-5">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Thanh toán học phí TDT</h1>
+                <p class="lead">Đây là trang web thanh toán học phí cho sinh viên TDT</p>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="pay.jfif" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Thanh toán học phí</h5>
+                <!-- Button trigger modal pay fee -->
+                <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#modalFee">
+                    Thanh toán
+                </button>
+                
+                <!-- Modal pay fee -->
+                <div class="modal fade" id="modalFee" tabindex="-1" role="dialog" aria-labelledby="modalFeeLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="modalFeeLabel">Thanh toán học phí</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="formFee" action="#" method="POST">
+                                    <div class="form-group row">
+                                        <label for="mssv" class="col-sm-2 col-form-label">MSSV</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" id="mssv" placeholder="MSSV">
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary float-right" type="button">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+    </script>
+</body>
+</html>

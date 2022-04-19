@@ -1,0 +1,40 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Đăng nhập
+  //
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  // <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  link(rel='stylesheet' href='css/login.css')
+.limiter
+  .container-login100
+    .wrap-login100
+      .login100-pic.js-tilt(style='text-align: center;;' data-tilt='')
+        img(src='https://stdportal.tdtu.edu.vn/Content/images/image.png' alt='IMG')
+      form.login100-form.validate-form(action='/login' method="POST")
+        span.login100-form-title
+          | Member Login
+        .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+          input.input100(type='text' name='username' placeholder='Username' required)
+          span.focus-input100
+          span.symbol-input100
+            i.fa.fa-envelope(aria-hidden='true')
+        .wrap-input100.validate-input(data-validate='Password is required')
+          input.input100(type='password' name='password' placeholder='Password' required)
+          span.focus-input100
+          span.symbol-input100
+            i.fa.fa-lock(aria-hidden='true')
+        .container-login100-form-btn
+          button.login100-form-btn
+            | Login
+        .text-center.p-t-12
+          span.txt1
+            | Forgot
+          a.txt2(href='#')
+            | Username / Password?
+        .text-center.p-t-136
+          a.txt2(href='#')
+            i.fa.fa-long-arrow-right.m-l-5(aria-hidden='true')
